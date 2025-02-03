@@ -1,9 +1,28 @@
-this backend can upload video and image to cloudeinary with the help of multer
+# Video & Image Upload Backend
 
-POST http://localhost:3000/upload 
+This backend allows you to upload video and image files to **Cloudinary** with the help of **Multer** for file handling.
 
-    body >>> form-data >>> key:video/file [dropdown:File] >>> value: {select the video/image}
+## Features:
+- Upload video and image files to Cloudinary.
+- Uses **Multer** for handling file uploads and **Cloudinary** for storage.
+- Retrieves the **Cloudinary URL** for uploaded files.
 
-GET http://localhost:3000/uploads/{the new generated file name}
-    
-    you will get the "GET" url automatically on the console for successful upload
+## Endpoints:
+
+### **POST `/upload`**
+Uploads a video or image file to Cloudinary.
+
+- **Method:** `POST`
+- **URL:** `http://localhost:3000/upload`
+- **Body:** `form-data`
+  - **Key:** `file` (or `video/file`)
+  - **Value:** Select your video/image file
+
+#### Response:
+- On successful upload, the server logs the **Cloudinary URL** of the uploaded file.
+- Example:
+  ```json
+  {
+    "message": "File uploaded successfully!",
+    "fileUrl": "https://res.cloudinary.com/your-cloud-name/video/upload/v1234567890/your-file-name.mp4"
+  }
