@@ -11,12 +11,12 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "cloudinary": "^1.41.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "gridfs-stream": "^1.1.1",
-    "mongoose": "^8.9.6",
     "multer": "^1.4.4",
-    "multer-gridfs-storage": "^5.0.2"
+    "multer-storage-cloudinary": "^4.0.0",
+    "path": "^0.12.7"
   }
 }
